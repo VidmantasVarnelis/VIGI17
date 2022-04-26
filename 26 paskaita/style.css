@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+.out-container {
+	display: flex;
+	justify-content: center;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	width: 20rem;
+}
+.container input {
+	width: 100%;
+	padding: 0.5rem;
+}
+.map {
+	height: 600px;
+	width: 100%;
+}

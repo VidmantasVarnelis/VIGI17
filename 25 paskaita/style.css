@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+#output div {
+	border: 1px solid rgb(199, 199, 199);
+	margin: 1rem;
+	padding: 1rem;
+}
+#output h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#output button {
+	border: 1px solid rgb(199, 199, 199);
+	padding: 1rem;
+	cursor: pointer;
+	margin-right: 1rem;
+}
+.update-container {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	background-color: rgba(199, 199, 199, 0.3);
+}
+.update-container form {
+	display: flex;
+	width: 400px;
+	flex-direction: column;
+}
+.update-container input {
+	padding: 0.5rem 1rem;
+}
+.active {
+	display: flex;
+}
