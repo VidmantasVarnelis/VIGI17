@@ -27,8 +27,9 @@ const app = express();
 app.use(cors());
 
 app.get('/', (request, response) => {
-	response.write('Hello world I am Vidmantas');
-	response.end();
+	// response.write('Hello world I am Vidmantas');
+	// response.end();
+	response.send('Hello world I am Vidmantas');
 });
 app.get('/about', (req, res) => {
 	// res.write('Hello world this about page');
@@ -39,7 +40,7 @@ app.get('/about', (req, res) => {
 	// });
 
 	res.status(200).json({
-		name: 'Vidmantas',
+		name: 'Vidmanas',
 	});
 });
 
