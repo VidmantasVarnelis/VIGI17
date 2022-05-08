@@ -2,16 +2,16 @@
 
 -   PWD - gražina absoliutu kelia iki esamos direktorijos
     pavizdys absoliutaus kelio /c/Users/Vidmantas/Documents/codeacademy/VIGI17
--   cd - pakeičia direktorija i kita.
-    komandos pavyzdys nurodant absoliutų kelią:
-    cd /c/Users/Vidmantas/Documents/codeacademy - rezultatas codeacademy direktorija.
-    komandos pavyzdys nurodant relatyvų kelią:
-    cd ./VIGI17 ir pnš.
-
-. - reprezentuoja esama direktoriją
-.. - reprezentuoja direktorija esančia vienu lygiu auksčiau.
-.. pavyzdys jeigu esame /c/Users/Vidmantas/Documents/codeacademy/VIGI17 kelyje:
-cd .. - rezultatas būtų /c/Users/Vidmantas/Documents/codeacademy
+-   cd - pakeičia direktorija i kita.<br />
+    komandos pavyzdys nurodant absoliutų kelią:<br />
+    cd /c/Users/Vidmantas/Documents/codeacademy - rezultatas codeacademy direktorija.<br />
+    komandos pavyzdys nurodant relatyvų kelią:<br />
+    cd ./VIGI17 ir pnš.<br />
+    <br />
+    . - reprezentuoja esama direktoriją<br />
+    .. - reprezentuoja direktorija esančia vienu lygiu auksčiau.<br />
+    .. pavyzdys jeigu esame /c/Users/Vidmantas/Documents/codeacademy/VIGI17 kelyje:<br />
+    cd .. - rezultatas būtų /c/Users/Vidmantas/Documents/codeacademy
 
 # NPM Komandos
 
