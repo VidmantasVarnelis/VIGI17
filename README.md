@@ -20,3 +20,5 @@
 -   npm install - įrašo visus package esančius package.json dependencies skiltyje į musu projektą.
 -   npm install <package_name> - įrašo package į mūsų projektą
 -   npm uninstall <package_name> - įštrina package iš mūsų projekto
+
+//Testuojam git pull
