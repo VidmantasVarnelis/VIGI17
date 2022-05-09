@@ -4,11 +4,12 @@ const getCars = async () => {
 		const data = await response.json();
 		return data;
 	} catch (err) {
-		console.log(err);
+		console.log('err', err);
 	}
 };
 
 const outputEl = document.getElementById('output');
+
 const main = async () => {
 	const cars = await getCars();
 	console.log(cars);
