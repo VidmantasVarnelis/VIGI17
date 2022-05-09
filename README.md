@@ -2,6 +2,7 @@
 
 -   PWD - gražina absoliutu kelia iki esamos direktorijos
     pavizdys absoliutaus kelio /c/Users/Vidmantas/Documents/codeacademy/VIGI17
+-   ls - parodo kokie failai ir kokios kitos direktorijos yra esamoje direktorijoje
 -   cd - pakeičia direktorija i kita. <br />
     komandos pavyzdys nurodant absoliutų kelią: <br />
     cd /c/Users/Vidmantas/Documents/codeacademy - rezultatas codeacademy direktorija. <br />
