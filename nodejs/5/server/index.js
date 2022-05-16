@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
   res.end();
 });
 
-const fn = (value) => console.log(value);
+// const fn = (value) => console.log(value);
 // fn();
 // const PORT = process.env.PORT ? process.env.PORT : 3001;
 
