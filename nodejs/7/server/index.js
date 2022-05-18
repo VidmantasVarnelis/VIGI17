@@ -61,7 +61,7 @@ app.get('/api/search', async (req, res) => {
     const studentsQuery = req.query;
     const con = await client.connect();
     console.log(studentsQuery);
-    const stundets = await con
+    const students = await con
       .db('VIGI17')
       .collection('students')
       .find({
@@ -72,10 +72,23 @@ app.get('/api/search', async (req, res) => {
       .toArray();
     await con.close();
 
-    return res.json(stundets);
+    return res.json(students);
   } catch (err) {
     return res.status(500).json({ status: 'error' });
   }
+});
+app.get('/api/test/:id', async (req, res) => {
+  const con = await client.connect();
+  const students = await con
+    .db('VIGI17')
+    .collection('students')
+    .find({
+      awards: {
+        $elemMatch: { name: 'test4' },
+      },
+    })
+    .toArray();
+  res.json(students);
 });
 
 app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
