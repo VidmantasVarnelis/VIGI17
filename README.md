@@ -22,3 +22,5 @@
 -   npm uninstall <package_name> - įštrina package iš mūsų projekto
 
 //Testuojam git pull
+
+-   ESLINT CTRL P - > Eslint restart Eslint server
