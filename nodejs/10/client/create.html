@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="./create.js" defer></script>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div class="nav-flex">
+                    <button class="nav-btn">Blog</button>
+                    <button class="nav-btn">Users</button>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="header-container">
+                    <button id="blog-posts-btn">Blog Posts</button>
+                </div>
+
+                <div class="form-container">
+                    <form>
+                        <h2>Create Blog Post</h2>
+                        <input
+                            type="text"
+                            name="img"
+                            id="img"
+                            placeholder="Enter img url"
+                        />
+                        <input
+                            type="text"
+                            name="title"
+                            id="title"
+                            placeholder="Enter Title"
+                        />
+                        <input
+                            type="text"
+                            name="dsc"
+                            id="dsc"
+                            placeholder="Enter description"
+                        />
+                        <div>
+                            <button type="submit">Create Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

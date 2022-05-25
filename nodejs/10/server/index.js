@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config();
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 const cors = require('cors');
 
 const app = express();
@@ -29,6 +29,15 @@ app.post('/api/v1/post', async (req, res) => {
       return res.status(400).json({ error: 'Bad Request' });
     }
     const con = await client.connect();
+    const blogPost = await con
+      .db('Blog')
+      .collection('posts')
+      .findOne({ title });
+    if (blogPost) {
+      return res
+        .status(400)
+        .json({ error: `Blog post with title: ${title}  already exists` });
+    }
     const posts = await con.db('Blog').collection('posts').insertOne({
       img,
       title,
@@ -39,6 +48,23 @@ app.post('/api/v1/post', async (req, res) => {
     return res.json(posts);
   } catch (err) {
     return res.status(500).json({
+      error: err.message,
+    });
+  }
+});
+
+app.delete('/api/v1/post/:id', async (req, res) => {
+  try {
+    const parameters = req.params;
+    const con = await client.connect();
+    const posts = await con
+      .db('Blog')
+      .collection('posts')
+      .deleteOne({ _id: ObjectId(parameters.id) });
+    await con.close();
+    res.json(posts);
+  } catch (err) {
+    res.status(500).json({
       error: err.message,
     });
   }
