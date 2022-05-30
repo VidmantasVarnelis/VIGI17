@@ -9,7 +9,7 @@ const fetchBlogPosts = async () => {
 };
 
 const displayData = (posts) => {
-    posts.forEach((post) => {
+    posts.forEach((post, index) => {
         const divBlogEl = document.createElement('div');
         const imgEl = document.createElement('img');
         const innerDivEl = document.createElement('div');
@@ -45,16 +45,16 @@ const displayData = (posts) => {
 const main = async () => {
     let posts = await fetchBlogPosts();
     let count = 0;
-    document.getElementById('sort-btn').addEventListener('click', () => {
+    document.getElementById('sort-btn').addEventListener('click', async () => {
         console.log('first');
         count++;
         blogContainer.textContent = '';
+        // let posts = await fetchBlogPosts();
         posts.sort((a, b) => {
             if (count % 2 === 0) {
-                console.log(a.createdAt);
-                return new Date(a.createdAt) > new Date(b.createdAt);
+                return new Date(a.createdAt) - new Date(b.createdAt);
             } else {
-                return new Date(b.createdAt) > new Date(a.createdAt);
+                return new Date(b.createdAt) - new Date(a.createdAt);
             }
         });
         displayData(posts);
