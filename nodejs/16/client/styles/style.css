@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    padding: 0 1rem 3rem;
+}
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    background-color: lightseagreen;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 0.25rem;
+}
+
+.company {
+    padding-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.company-item {
+    cursor: pointer;
+    flex: 1 0 300px;
+}
+.company-item h1 {
+    margin: 0;
+}
+.company-item p {
+    margin: 0;
+}
+.company-item img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 500px;
+}
+a {
+    text-decoration: none;
+}
+button {
+    padding: 0.5rem;
+    border: 0;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(211, 211, 211);
+}
