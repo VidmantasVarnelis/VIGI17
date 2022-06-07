@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./form.js" defer></script>
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="./">Companies</a></li>
+                    <li><a href="./add-company">Add Company</a></li>
+                </ul>
+            </nav>
+            <div class="form-container">
+                <form>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="name"
+                    />
+                    <input
+                        type="text"
+                        name="size"
+                        id="size"
+                        placeholder="size"
+                    />
+                    <input
+                        type="text"
+                        name="img_url"
+                        id="img_url"
+                        placeholder="img_url"
+                    />
+                    <input
+                        type="text"
+                        name="year"
+                        id="year"
+                        placeholder="year"
+                    />
+                    <input
+                        type="text"
+                        name="address"
+                        id="address"
+                        placeholder="address"
+                    />
+                    <input
+                        type="radio"
+                        name="field"
+                        id="field"
+                        value="IT"
+                        placeholder="field"
+                    />
+                    <label for="field">IT</label>
+                    <textarea
+                        name="desc"
+                        id="desc"
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                    <button type="submit">Create Company</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
