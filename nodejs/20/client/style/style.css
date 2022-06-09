@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+nav ul li a {
+    background-color: cadetblue;
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+form input {
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+}
+form label {
+    /* display: block;/ */
+}
