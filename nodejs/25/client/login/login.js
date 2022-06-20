@@ -21,6 +21,14 @@ document.querySelector('form').addEventListener('submit', async (event) => {
         password: event.target.elements.password.value,
     };
     if (!data.username || !data.password) return;
-    const user = await getUser(data);
-    console.log(user);
+    const { token, user } = await getUser(data);
+    if (token) {
+        localStorage.setItem(
+            'userData',
+            JSON.stringify({ token: token, user })
+        );
+        location.replace('../game/game.html');
+    } else {
+        alert('Login failed!');
+    }
 });
