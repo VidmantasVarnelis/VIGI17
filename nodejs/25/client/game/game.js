@@ -90,9 +90,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ).textContent = `Wrong answers - ${misses}`;
                     //.textContent = 'Wrong ansers - ' + misses
                 }
-                if (game) {
-                    await postWin(id, misses);
-                }
+                // if (game) {
+                //     await postWin(id, misses);
+                //     const leaders = await getLeaders(id);
+                //     console.log(leaders);
+                // }
             });
         });
     document.addEventListener('keydown', async (event) => {
@@ -121,10 +123,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 'wrong_answers'
             ).textContent = `Wrong answers - ${misses}`;
         }
-        if (game) {
-            await postWin(id, misses);
-            const leaders = await getLeaders(id);
-            console.log(leaders);
-        }
+        // if (game) {
+        //     await postWin(id, misses);
+        //     const leaders = await getLeaders(id);
+        //     console.log(leaders);
+        // }
     });
 });
