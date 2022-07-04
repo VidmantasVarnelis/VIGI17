@@ -8,7 +8,7 @@ const DB_CONFIG = require('../config');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.put('/', async (req, res) => {
   try {
     const { city } = req.query;
     // const response = await fetch(

@@ -1,7 +1,10 @@
 const getWeather = async (city) => {
     try {
         const response = await fetch(
-            `http://localhost:8080/api/weather?city=${city}`
+            `http://localhost:8080/api/weather?city=${city}`,
+            {
+                method: 'PUT',
+            }
         );
         return await response.json();
     } catch (err) {
