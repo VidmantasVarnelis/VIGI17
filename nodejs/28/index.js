@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   const name = 'As esu Vidmantas';
+
   res.render('index', { name });
 });
 app.get('/about', (req, res) => {
