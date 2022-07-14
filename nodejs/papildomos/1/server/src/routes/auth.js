@@ -13,7 +13,6 @@ const authSchema = joi.object({
 });
 
 router.post('/register', async (req, res) => {
-  return res.json({ test: 'testuoju' });
   const { name, password } = req.body;
   try {
     await authSchema.validateAsync({ name, password });
