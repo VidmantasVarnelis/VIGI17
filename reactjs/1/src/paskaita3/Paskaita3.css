@@ -1,0 +1,51 @@
+.section {
+    display: flex;
+    min-height: 60vh;
+}
+.section .img_container {
+    flex: 0.5;
+}
+.section .img_container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.content_container {
+    flex: 0.5;
+    padding: 3rem 2rem;
+}
+.content_container h4 {
+    position: relative;
+    color: orange;
+    padding-left: 3.5rem;
+}
+.content_container h4::before {
+    content: '';
+    width: 3rem;
+    height: 3px;
+    background-color: orange;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -0.5rem;
+}
+.content_container h1 {
+    max-width: 14rem;
+    margin: 1rem 0 2rem;
+}
+.content_container p {
+    max-width: 17rem;
+    margin: 1rem 0 2rem;
+}
+button {
+    padding: 0.75rem 1rem;
+    outline: 3px solid cyan;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover {
+    outline: none;
+}
