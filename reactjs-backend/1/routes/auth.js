@@ -24,7 +24,7 @@ router.post('/register', async (req, res) => {
   try {
     await registerSchema.validateAsync({
       username,
-      plainPassword,
+      password: plainPassword,
       email,
       name,
       lastname,
@@ -51,7 +51,7 @@ router.post('/register', async (req, res) => {
         secure: false,
       })
       .status(201)
-      .json(user);
+      .json({ status: true, user });
   } catch (err) {
     res.json({ status: false, error: 'user not created!' });
   }
