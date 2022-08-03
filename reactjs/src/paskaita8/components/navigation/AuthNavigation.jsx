@@ -10,13 +10,13 @@ const NavigationContainer = styled.div`
   align-items: center;
 `;
 
-const SyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: #333333;
   font-size: 1.25rem;
   position: relative;
-  ${({ bottomDivider }) => {
-    if (bottomDivider) {
+  ${({ $divider }) => {
+    if ($divider) {
       return `&:before{
         content: '';
         position: absolute;
@@ -36,15 +36,12 @@ const AuthNavigation = () => {
   const location = useLocation();
   return (
     <NavigationContainer>
-      <SyledLink to='/login' bottomDivider={location.pathname === '/login'}>
+      <StyledLink to='/login' $divider={location.pathname === '/login'}>
         Login
-      </SyledLink>
-      <SyledLink
-        to='/register'
-        bottomDivider={location.pathname === '/register'}
-      >
+      </StyledLink>
+      <StyledLink to='/register' $divider={location.pathname === '/register'}>
         Become a user!
-      </SyledLink>
+      </StyledLink>
     </NavigationContainer>
   );
 };

@@ -43,15 +43,7 @@ router.post('/register', async (req, res) => {
       lastname,
     });
 
-    const token = jwt.sign({ _id: user._id, username }, process.env.JWT_SECRET);
-
-    res
-      .cookie('jwt', token, {
-        httpOnly: true,
-        secure: false,
-      })
-      .status(201)
-      .json({ status: true, user });
+    res.status(201).json({ status: true, user });
   } catch (err) {
     res.json({ status: false, error: 'user not created!' });
   }
