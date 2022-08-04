@@ -10,8 +10,8 @@ const StyledButton = styled.button`
   font-size: 1rem;
 `;
 
-const Button = ({ title }) => {
-  return <StyledButton>{title}</StyledButton>;
+const Button = ({ title, onClick }) => {
+  return <StyledButton onClick={onClick}>{title}</StyledButton>;
 };
 
 export default Button;

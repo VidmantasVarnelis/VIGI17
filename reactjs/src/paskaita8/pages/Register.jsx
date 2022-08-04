@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from '../components/button/Button';
 import Input from '../components/input/Input';
@@ -27,6 +28,7 @@ const Register = () => {
     name: '',
     lastname: '',
   });
+  const navigate = useNavigate();
 
   const [username, setUsername] = useState('');
 
@@ -39,10 +41,11 @@ const Register = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include',
       });
       const data = await response.json();
-      console.log(data);
+      if (data.status) {
+        navigate('/login');
+      }
     } catch (err) {
       console.log(err);
     }
