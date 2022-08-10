@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paskaita 12 tests Paskaita 12 renders correctly 1`] = `
+<div>
+  <div>
+    <h1
+      data-testid="heading"
+    >
+      Count - 
+      0
+    </h1>
+    <button>
+      Increment
+    </button>
+    <button>
+      Decrement
+    </button>
+  </div>
+</div>
+`;

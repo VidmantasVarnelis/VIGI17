@@ -9,7 +9,8 @@ import { initialState, reducer } from './paskaita10/actions/main';
 // import Paskaita7 from './paskaita7/Paskaita7';
 // import Paskaita8 from './paskaita8/Paskaita8';
 // import Paskaita10 from './paskaita10/Paskaita10';
-import Paskaita11 from './paskaita11/Paskaita11';
+// import Paskaita11 from './paskaita11/Paskaita11';
+import Paskaita12 from './paskaita12/Paskaita12';
 
 export const MyContext = createContext();
 export const SecondContext = createContext();
@@ -29,7 +30,8 @@ function App() {
         {/* <Paskaita7 /> */}
         {/* <Paskaita8 /> */}
         {/* <Paskaita10 /> */}
-        <Paskaita11 />
+        {/* <Paskaita11 /> */}
+        <Paskaita12 />
       </div>
     </MyContext.Provider>
   );
