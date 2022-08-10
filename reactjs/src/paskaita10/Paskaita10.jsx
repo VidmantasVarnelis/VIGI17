@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
+import { useState } from 'react';
 import { MyContext } from '../App';
 import styles from './paskaita10.module.scss';
 
 const Paskaita10 = () => {
   const { theme, state, dispatch } = useContext(MyContext);
+  const [value, setValue] = useState('');
 
   return (
     <div className={theme === 'light' ? styles.light : styles.dark}>
@@ -15,12 +17,16 @@ const Paskaita10 = () => {
           {state.name} - {state.year}
         </h1>
         <button
-          onClick={() =>
-            dispatch({ type: 'change-name', payload: 'Javascript' })
-          }
+          onClick={() => dispatch({ type: 'change-name', payload: value })}
         >
           Change Name reducer value
         </button>
+        <input
+          type='text'
+          name='reducer'
+          value={value}
+          onChange={(event) => setValue(event.target.value)}
+        />
         <button
           onClick={() => dispatch({ type: 'change-year', payload: 2015 })}
         >
